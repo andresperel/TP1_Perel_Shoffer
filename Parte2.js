@@ -18,7 +18,7 @@ function ejercicioSuma()
 }
 function mayorNumero(numeros)
 {
-    let numeroMayor = 0;
+    let numeroMayor = numeros[0];
     for(let i = 0; i < numeros.length; i++)
 {
  if (numeros[i]> numeroMayor)
