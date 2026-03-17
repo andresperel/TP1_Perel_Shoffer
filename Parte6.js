@@ -18,7 +18,7 @@ function probarCaros() {
     const caros = productosCaros(productos);
 
     document.getElementById("resultado").innerText =
-    "Caros: " + caros.map(p => p.nombre + " ($" + p.precio + ")").join(", ");
+    "Caros: " + caros.map(p => p.nombre + " (" + p.precio + ")")
 }
 
 function probarPromedio() {
@@ -33,4 +33,17 @@ function probarPromedio() {
 
     document.getElementById("resultado").innerText =
     "Promedio: " + prom;
+}
+function probarBuscar() {
+    let nombre = document.getElementById("nombreProducto").value;
+
+    const producto = buscarProducto(productos, nombre);
+
+    if (producto) {
+        document.getElementById("resultado").innerText =
+        producto.nombre + " - " + producto.precio;
+    } else {
+        document.getElementById("resultado").innerText =
+        "Producto no encontrado";
+    }
 }
